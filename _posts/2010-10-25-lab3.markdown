@@ -1,0 +1,38 @@
+Lab 3
+
+1. Wyswietl plik /etc/passwd z podzialem na strony przyjmujac, ze strona na 5 linii tekstu.
+
+   pg -5 passwd.c
+
+2. Korzystajac z polecenia cat utworz plik tekst3.txt, ktory bedzie skladal sie z zawartosci pliku tekst1.txt, ciagu znakow podanego ze standardowego wejscia (klawiatury) i pliku tekst2.txt.
+
+   cat tekst1.txt - tekst2.txt >tekst3.txt
+
+3. Wyswietl po 5 pierwszych linii wszystkich plikow w swoim katalogu domowym w taki sposob, aby nie byly wyswietlane ich nazwy.
+
+   head -5 -q *
+
+4. Wyswietl linie o numerach 3, 4 i 5 z pliku /etc/passwd.
+
+   head -n 5 passwd.c | tail -n 3
+
+5. Wyswietl linie o numerach 7, 6 i 5 od konca pliku /etc/passwd.
+
+   tail -n 7 passwd.c | head -n 3
+
+6. Wyswietl zawartosc pliku /etc/passwd w jednej linii.
+
+   cat passwd.c | tr "\n" " "
+
+7. Za pomoca filtru tr wykonaj modyfikacje pliku plik.txt, polegajaca na umieszczeniu kazdego slowa w osobnej linii.
+
+   tr " " "\n" plik.txt
+
+8. Zlicz wszystkie pliki znajdujace sie w katalogu /etc i jego podkatalogach.
+
+   ls -aA1 * |wc -l
+
+
+9. Napisac polecenie zliczajace ilosc znakow z pierwszych trzech linii pliku /etc/passwd.
+
+   head -n 3 passwd.c | wc -c

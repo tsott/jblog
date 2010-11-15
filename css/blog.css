@@ -30,11 +30,11 @@
 
 #logo a {
   text-decoration: none;
-  color: #5A0405;
+  color: #0000ff;
 }
 
 #logo a:focus, #logo a:hover, #links a:focus, #links a:hover {
-  color: #321494;
+  color: #0000ff;
 }
 
 html {

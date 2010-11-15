@@ -1,0 +1,29 @@
+Lab 4
+
+1. Wyswietl liste plikow z aktualnego katalogu, zamieniajac wszystkie male litery na duze.
+
+   ls | tr '[a-z]' '[A-Z]'
+
+2. Wyswietl liste praw dostepu do plikow w aktualnym katalogu, ich rozmiar i nazwe.
+
+find -maxdepth 1  -printf '%m\t%s\t%f\n' -not -type d
+
+3. Wyswietl liste plikow w aktualnym katalogu, posortowana wedlug rozmiaru pliku.
+
+   ls -lS
+
+4. Wyswietl zawartosc pliku /etc/passwd posortowana wedlug numerow UID w kolejnosci od najwiekszego do najmniejszego.
+
+   sort -t : -n -k3 -r passwd
+
+5. Wyswietl zawartosc pliku /etc/passwd posortowana najpierw wedlug numerow GID w kolejnosci od najwiekszego do najmniejszego, a nastepnie UID.
+
+   sort -t : -k4 -r passwd | sort -t : -k3
+
+6. Podaj liczbe plikow kazdego uzytkownika.
+
+find $HOME -not -type d |wc -l
+
+7. Sporzadz statystyke praw dostepu (dla kazdego z praw dostepu podaj ile razy zostalo ono przydzielone).
+
+Czy potrafisz odpowiedziec jaki bedzie efekt wykonania ponizszych polecen?
